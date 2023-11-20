@@ -1,0 +1,140 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* background:orange; */
+}
+body {
+  height: 100vh;
+  background: rgb(255, 50, 50);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 50, 50, 1) 32%,
+    rgba(255, 141, 0, 1) 90%
+  );
+}
+.content {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  align-items: center;
+  min-height: 100vh;
+  /* height: 100vh; */
+}
+.left-container,
+.right-container {
+  background-color: white;
+  /* padding: 10px; */
+  width: 50vw;
+  /* border: 2px solid black; */
+}
+.left-container {
+  height: 300px;
+  /* width: 300px; */
+  /* display: flex; */
+  background-image: url(images/brand.png);
+  background-repeat: no-repeat;
+  background-size: 300px;
+  background-position: center;
+  border-radius: 10px;
+}
+
+.right-container {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 10px;
+}
+.right-container button {
+  background: rgb(255, 50, 50);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 50, 50, 1) 32%,
+    rgba(255, 141, 0, 1) 90%
+  );
+}
+.right-container button:hover {
+  background: rgb(255, 50, 50);
+  background: linear-gradient(
+    271deg,
+    rgba(255, 50, 50, 1) 32%,
+    rgba(255, 141, 0, 1) 90%
+  );
+  cursor: pointer;
+}
+.right-container .email:focus {
+  border: none;
+  outline: none;
+}
+.email{
+  background: rgb(210, 210, 210);
+  font-weight: bold;
+  /* width: 97%; */
+}
+.name-phn,
+.tran-utr {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.name-phn input,
+.tran-utr input {
+  font-weight: bold;
+  margin: 5px;
+  text-align: center;
+  height: 50px;
+  border: none;
+  border-radius: 20px;
+  background: rgb(210, 210, 210);
+  color:black;
+}
+.name-phn input:focus,
+.tran-utr input:focus {
+  outline: none;
+  border: none;
+}
+
+@media only screen and (max-width: 790px) {
+  .content {
+    flex-direction: column;
+    justify-content: space-around;
+    transition: all 1s;
+    /* width: 100%; */
+    /* min-height: 100vh; */
+  }
+  .left-container {
+    margin-bottom: 10px;
+    width: 80%;
+    height: 200px;
+  }
+  .right-container {
+    margin-top: 10px;
+  }
+  .btn {
+    width: 99%;
+  }
+  .name-phn input,
+  .tran-utr input,
+  .email {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 790px) {
+  .content {
+    transition: all 1s;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .btn {
+    width: 91%;
+  }
+  .left-container{
+    width: 30%;
+  }
+  .email{
+    width: 100%;
+  }
+}
